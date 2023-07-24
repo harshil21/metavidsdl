@@ -9,7 +9,7 @@ import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, Request
 from fastapi.responses import PlainTextResponse
-from telegram import Update
+from telegram import Update  #upm package(python-telegram-bot)
 from telegram.ext import Application, CommandHandler, ContextTypes, MessageHandler, filters
 
 load_dotenv()
@@ -17,6 +17,8 @@ load_dotenv()
 
 TOKEN = getenv("TOKEN", "")  # bot token
 DEV_ID = getenv("DEV_ID", "")
+USER = getenv("USER", "")
+PASSWORD = getenv("PASSWORD", "")
 PORT = 80
 
 START_TEXT = (
@@ -63,6 +65,7 @@ def download_video_from_url(short_code, tmpdirname) -> Path | None:
         download_video_thumbnails=False,
         dirname_pattern=tmpdirname + "/{target}",
     )
+    loader.login(USER, PASSWORD)
     post = instaloader.Post.from_shortcode(loader.context, short_code)
     loader.download_post(post, target="reel")
     for file in (Path(tmpdirname) / "reel").iterdir():

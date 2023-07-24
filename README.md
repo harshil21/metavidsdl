@@ -1,8 +1,6 @@
 ### Meta Video Downloader
 
-
-A simple telegram bot which downloads videos from insta reels links. Chat with it [here](https://t.me/meta_video_downloader_bot).
-
+A simple telegram bot which downloads videos from insta reels links. Please start your own instance of the bot since it requires login credentials (when hosting on sites like Replit, if you don't use credentials, you'll likely start getting 401's. Also see https://github.com/instaloader/instaloader/issues/2011) to download videos. Click the "Made with Replit" banner to get started.
 
 Support for downloading Meta (formerly Facebook) videos will be added later. Only instagram.com/reels/ links are supported for now.
 

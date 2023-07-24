@@ -9,3 +9,17 @@ select = ["E", "F", "I", "PL", "UP", "RUF", "PTH", "C4", "B", "PIE", "SIM", "RET
 [tool.black]
 line-length = 99
 target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.poetry]
+name = "metavidsdl"
+version = "0.1.0"
+description = ""
+authors = ["harshil21"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-telegram-bot = "^20.4"
+fastapi = "^0.100.0"
+uvicorn = "^0.23.1"
+python-dotenv = "^1.0.0"
+instaloader = "4.10"
